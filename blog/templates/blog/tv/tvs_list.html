@@ -1,0 +1,74 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+    {{ Category_TV.slug }} 
+    {{ LG.title }}
+    {{ Sony.title }}
+    {{ Panasonic.title }}
+{% endblock %}
+
+{% block content %}
+    {% for category_tv in category_tvs %}
+    <div>
+        <p>
+            <!-- <img src="{{ category_tv.image.url }}" width="250" height="200" alt="" > -->
+            {{ category_tv.slug }}
+            <!-- {{ catalog.slug }} -->
+        </p>
+    </div>        
+    {% endfor %}
+    {% for lg in lgs %}
+    <div>
+        <p>
+            {{ lg.lgs_tv }}
+            <img src="{{ lg.image.url }}" width="250" height="200" alt="" >
+            <p></p>{{ lg.slug }}
+            <p></p>{{ lg.title }}
+            {{ lg.screen }}
+            {{ lg.connect }}
+            {{ lg.size }}
+            {{ lg.decimal }}
+            <a href="{% url 'tvs_detail_url' slug=lg.slug %}">Read</a>
+        </p>
+    </div>
+    {% endfor %}
+    <!-- {% for samsung_tv in samsung_tvs %}
+    <div>
+        <p>
+            <img src="{{ samsung_tv.image.url }}" width="250" height="200" alt="" >
+            {{ samsung_tv.slug }}
+            {{ samsung_tv.title }}
+            {{ samsung_tv.screen }}
+            {{ samsung_tv.connect }}
+            {{ samsung_tv.size }}
+            {{ samsung_tv.decimal }}
+        </p>
+    </div>
+    {% endfor %}
+    {% for sony in sonys %}
+    <div>
+        <p>
+            <img src="{{ sony.image.url }}" width="250" height="200" alt="" >
+            {{ sony.slug }}
+            {{ sony.title }}
+            {{ sony.screen }}
+            {{ sony.connect }}
+            {{ sony.size }}
+            {{ sony.decimal }}
+        </p>
+    </div>
+    {% endfor %}
+    {% for panasonic in panasonics %}
+    <div>
+        <p>
+            <img src="{{ panasonic.image.url }}" width="250" height="200" alt="" >
+            {{ panasonic.slug }}
+            {{ panasonic.title }}
+            {{ panasonic.screen }}
+            {{ panasonic.connect }}
+            {{ panasonic.size }}
+            {{ panasonic.decimal }}
+        </p>
+    </div>
+    {% endfor %} -->
+{% endblock %}

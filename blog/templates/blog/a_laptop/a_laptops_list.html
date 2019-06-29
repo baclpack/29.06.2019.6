@@ -1,0 +1,71 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+    {{ Category_a_laptop.slug }}
+    {{ Mac_OS.title }}
+    {{ ASUS.title }}
+    {{ ACER.title }}
+{% endblock %}
+
+{% block content %}
+    {% for category_a_laptop in category_a_laptops %}
+        <div class="container mt-2">
+            <div class="row">
+                <div class="col-6 offset-mb-2">                
+                    <p>
+                        {{ category_a_laptop.slug }}
+                    </p>                
+                </div>
+            </div>
+        </div>    
+    {% endfor %}
+    {% for os_mac in os_macs %}
+    <div>
+        <p>
+            <img src="{{ os_mac.image.url }}" width="250" height="200" alt="" >
+            {{ os_mac.mac_a_laptop }}
+            {{ os_mac.slug }}
+            {{ os_mac.title }}
+            {{ os_mac.touch }}
+            {{ os_mac.weight }}
+            {{ os_mac.memory }}
+            {{ os_mac.onnect }}
+            {{ os_mac.thickness }}
+            {{ os_mac.ssd }}
+            {{ os_mac.decimal }}
+        </p>
+    </div>        
+    {% endfor %}
+    {% for asus in asuss %}
+    <div>
+        <p>
+            <img src="{{ asus.image.url }}" width="250" height="200" alt="" >            
+            {{ asus.slug }}
+            {{ asus.title }}
+            {{ asus.touch }}
+            {{ asus.weight }}
+            {{ asus.memory }}
+            {{ asus.onnect }}
+            {{ asus.thickness }}
+            {{ asus.ssd }}
+            {{ asus.decimal }}
+        </p>
+    </div>        
+    {% endfor %}
+    {% for acer in acers %}
+    <div>
+        <p>
+            <img src="{{ acer.image.url }}" width="250" height="200" alt="" >
+            {{ acer.slug }}
+            {{ acer.title }}
+            {{ acer.touch }}
+            {{ acer.weight }}
+            {{ acer.memory }}
+            {{ acer.onnect }}
+            {{ acer.thiclness }}
+            {{ acer.ssd }}
+            {{ acer.decimal }}
+        </p>
+    </div>        
+    {% endfor %}
+{% endblock %}

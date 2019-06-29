@@ -1,0 +1,24 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+    {{ lg.slug }} - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+
+{% for catalog in lg.lg_tv_catalog.all %}
+    <a href="{{ category_tv.get_absolute_url }}">
+        <p>{{ category_tv.slug }}</p>
+    </a>
+{% endfor %}
+    <!-- {% for category_tv in lg.lg_tv.all %}
+        <a href="{{ category_tv.get_absolute_url }}">
+            <p>{{ lg.slug }}</p>
+        </a>
+    {% endfor %}
+    {{ category_phone.slug }}
+
+    {% for phone_catalog in category_phone.phone_catalog.all %}
+        <a href="{{ phone_catalog.get_absolute_url }}">Read</a>
+    {% endfor %} -->
+{% endblock %}

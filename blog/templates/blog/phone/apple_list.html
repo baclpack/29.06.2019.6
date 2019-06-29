@@ -1,0 +1,15 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+    {{ Apple.title }}
+{% endblock %}
+
+{% block content %}
+    {% for apple in apples %}
+    <div>
+        <!-- <a href="{{ catalog.get_absolute_url }}"> -->
+            <img src="{{ apple.image.url }}" width="250" height="200" alt="">
+        <!-- </a> -->
+    </div>
+    {% endfor %}
+{% endblock %}

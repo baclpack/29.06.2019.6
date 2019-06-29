@@ -1,0 +1,15 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+    {{ ACER.title }} - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    {% for acer in acers %}
+    <div>
+        <!-- <a href="{{ catalog.get_absolute_url }}"> -->
+            <img src="{{ acer.image.url }}" width="250" height="200" alt="">
+        <!-- </a> -->
+    </div>
+    {% endfor %}
+{% endblock %}

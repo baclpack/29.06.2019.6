@@ -1,0 +1,15 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+    {{ Xiaomi.title }} - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    {% for xiaomi in xiaomis %}
+    <div>
+        <!-- <a href="{{ catalog.get_absolute_url }}"> -->
+            <img src="{{ xiaomi.image.url }}" width="250" height="200" alt="">
+        <!-- </a> -->
+    </div>
+    {% endfor %}
+{% endblock %}

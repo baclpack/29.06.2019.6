@@ -1,0 +1,15 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+    {{ Samsung.title }}
+{% endblock %}
+
+{% block content %}
+    {% for samsung in samsungs %}
+    <div>
+        <!-- <a href="{{ catalog.get_absolute_url }}"> -->
+            <img src="{{ samsung.image.url }}" width="250" height="200" alt="">
+        <!-- </a> -->
+    </div>
+    {% endfor %}
+{% endblock %}

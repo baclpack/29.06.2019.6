@@ -1,0 +1,15 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+    {{ Sony.title }}
+{% endblock %}
+
+{% block content %}
+    {% for sony in sonys %}
+    <div>
+        <!-- <a href="{{ catalog.get_absolute_url }}"> -->
+            <img src="{{ sony.image.url }}" width="250" height="200" alt="">
+        <!-- </a> -->
+    </div>
+    {% endfor %}
+{% endblock %}

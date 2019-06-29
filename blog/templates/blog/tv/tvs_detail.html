@@ -1,0 +1,17 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+    {{ Category_TV.slug }}
+    {{ LG.title }}
+    {{ Sony.title }}
+    {{ Panasonic.title }}
+{% endblock %}
+
+{% block content %}
+    <h1 class="mb-5">
+        {{ lg.title }}
+    </h1>
+    <p>
+        {{ lg.screen }}
+    </p>
+{% endblock %}

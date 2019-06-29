@@ -1,0 +1,57 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+    {{ Category_Phone.slug }}
+    {{ Samsung.title }}
+    {{ Apple.title }}
+    {{ Xiaomi.title }}
+{% endblock %}
+
+{% block content %}
+    {% for category_phone in category_phones %}
+    <div>
+        <p>
+            {{ category_phone.slug }}
+        </p>
+    </div>        
+    {% endfor %}
+    {% for samsung in samsungs %}
+    <div>
+        <p>
+            <img src="{{ samsung.image.url }}" width="250" height="200" alt="" >
+            {{ samsung.slug }}
+            {{ samsung.title }}
+            {{ samsung.camera }}
+            {{ samsung.memory }}
+            {{ samsung.connect }}
+            {{ samsung.decimal }}
+        </p>
+    </div>        
+    {% endfor %}
+    {% for apple in apples %}
+    <div>
+        <p>
+            <img src="{{ apple.image.url }}" width="250" height="200" alt="" >
+            {{ apple.title }}
+            {{ apple.slug }}
+            {{ apple.camera }}
+            {{ apple.memory }}
+            {{ apple.connect }}
+            {{ apple.decimal }}
+        </p>
+    </div>        
+    {% endfor %}
+    {% for xiaomi in xiaomis %}
+    <div>
+        <p>
+            <img src="{{ xiaomi.image.url }}" width="250" height="200" alt="" >
+            {{ xiaomi.title }}
+            {{ xiaomi.slug }}
+            {{ xiaomi.connect }}
+            {{ xiaomi.memory }}
+            {{ xiaomi.camera }}
+            {{ xiaomi.decimal }}
+        </p>
+    </div>        
+    {% endfor %}
+{% endblock %}
